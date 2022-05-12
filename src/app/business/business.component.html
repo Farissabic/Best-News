@@ -1,0 +1,33 @@
+
+    <div class="row">
+       
+        <div class="col-md-12" >
+            <h4 style="padding-top: 20px; color: rgb(58, 117, 226);">Business News :</h4>
+            <hr>
+            <div class="row" routerLinkActive="act">
+                <div class="col-md-6" *ngFor="let i of articles.slice(0,items); let id=index" >
+
+                    <div class="card" [routerLink]="[id]" >
+                        <img class="card-img-top" src="{{i.urlToImage}}" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="source">{{i.source.name}}</p>
+                          <h5 class="card-title">{{i.title}}</h5>
+                          <p class="card-text">{{i.author}}</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+             
+                <div class="col text-center">
+                    <button class="btn btn-primary" type="button" (click)="loadNews()" [disabled]="clicked">Load More News...</button>
+                    <br>
+                </div>
+                    
+              
+            </div>
+            
+            <router-outlet></router-outlet>
+        </div>
+       
+    </div>
+

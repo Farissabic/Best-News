@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light  sticky-top">
+    <a 
+        class="navbar-brand" 
+        style="cursor: pointer; font-weight: bolder; font-size: 24px;">BestNEWS
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse  justify-content-center" id="navbarSupportedContent" >
+        <ul class="nav navbar-nav navbar-reight">
+  
+          <li class="nav-item"  style="cursor: pointer;" routerLinkActive="active">
+            <a class="nav-link" routerLink="/home"  >Home</a>
+          </li>
+
+
+          <li class="nav-item" style="cursor: pointer;" routerLinkActive="active">
+            <a class="nav-link" routerLink="/business" >Business</a>
+          </li>
+  
+          <li class="nav-item" style="cursor: pointer;" routerLinkActive="active">
+              <a class="nav-link"  routerLink="/sport" >Sport</a>
+            </li>
+
+            <li class="nav-item" style="cursor: pointer;" routerLinkActive="active">
+                <a class="nav-link" routerLink="/search" >Search</a>
+              </li>
+          
+          
+        </ul>
+        
+      </div>
+    
+  </nav>
+  <div class="container-fluid">
+    <div class="row" id="cover">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="text-center" >BestNEWS</h1>
+            <p class="text-center">{{ time | date: 'hh : mm : ss a' }}</p>
+           
+        </div>
+    </div>
+</div>

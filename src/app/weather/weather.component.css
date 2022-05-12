@@ -1,0 +1,21 @@
+h2{
+    padding-top: 10px;
+}
+
+.temp{
+    padding-top: 20px;
+}
+
+#weather-card{
+    border-radius: 20px;
+    background-color: #b7d0e9;
+}
+
+.search{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.search button{
+    margin-top: 10px;
+}

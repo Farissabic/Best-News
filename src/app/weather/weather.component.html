@@ -1,0 +1,61 @@
+
+<div class="card text-center " id="weather-card">
+    <div class="card-body">
+        <h4 class="card-title">{{weather.city}}</h4>
+        <p class="card-subtitle text-muted">Country : {{weather.country}}</p>
+        <hr>
+        <div class="row text-center">
+            <div class="col-md-6">
+                <h2 class="card-text">{{weather.curentTemp}}°C</h2>
+            </div>
+            <div class="col-md-6">
+               <img class="img"  src="{{weather.icon}}" alt="jpg">
+            </div>
+           
+        </div>
+        <p class="card-text">{{weather.description}}</p>
+        <div class="row temp">
+            <div class="col-md-12">
+                <h6 class="card-text">Max Temp : {{weather.maxTemp}}</h6>
+                <h6 class="card-text">Min Temp : {{weather.minTemp}}</h6>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+<div class="row search">
+    <form (ngSubmit)="findWeather(f)" #f="ngForm">
+        <label for="city" >City :</label>
+        <input type="text" name="city" class="form-control" required ngModel>
+        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Find Weather</button> |
+        <button type="button" class="btn btn-danger" [disabled]="!f.valid" (click)="clear(f)">Clear</button>
+    </form>
+</div>
+
+<br>
+
+<div class="card text-center " id="weather-card" *ngIf="f.submitted">
+    <div class="card-body">
+        <h4 class="card-title">{{cityWeather.city}}</h4>
+        <p class="card-subtitle text-muted">Country : {{cityWeather.country}}</p>
+        <hr>
+        <div class="row text-center">
+            <div class="col-md-6">
+                <h2 class="card-text">{{cityWeather.curentTemp}}°C</h2>
+            </div>
+            <div class="col-md-6">
+               <img class="img"  src="{{cityWeather.icon}}" alt="jpg">
+            </div>
+           
+        </div>
+        <p class="card-text">{{cityWeather.description}}</p>
+        <div class="row temp">
+            <div class="col-md-12">
+                <h6 class="card-text">Max Temp : {{cityWeather.maxTemp}}</h6>
+                <h6 class="card-text">Min Temp : {{cityWeather.minTemp}}</h6>
+            </div>
+        </div>
+       
+    </div>
+</div>

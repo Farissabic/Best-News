@@ -1,0 +1,20 @@
+
+<div class="container">
+
+    <div class="row">
+        <h2>{{article.title}}</h2>
+        <img style="max-width: 700px;" src="{{article.urlToImage}}" alt="" >
+        <br>
+        <p>{{article.description}}
+            <a style="text-decoration: none; font-weight: 500;" href="{{article.url}}">Read More</a>
+        </p>
+    </div>
+    
+    <div class="row">
+        <button class="btn btn-primary " type="button" (click)="back()">Back</button>
+    </div>
+    <br>
+    
+
+</div>
+
